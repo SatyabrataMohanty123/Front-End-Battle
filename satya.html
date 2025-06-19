@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    // Dark mode toggle
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark');
+    }
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CLIMATE PLOT | Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <style>
+    .ripple { position: relative; overflow: hidden; }
+    .ripple::after {
+      content: "";
+      position: absolute;
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      animation: ripple-effect 0.7s linear;
+    }
+    @keyframes ripple-effect {
+      to {
+        transform: translate(-50%, -50%) scale(5);
+        opacity: 0;
+      }
+    }
+    @keyframes spin-slow {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .animate-spin-slow {
+      animation: spin-slow 12s linear infinite;
+    }
+    #loader {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(to bottom right, #e0f2fe, #ffffff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    .loader-circle {
+      border: 8px solid #e5e7eb;
+      border-top: 8px solid #2563eb;
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body class="transition duration-500 dark:bg-gray-900 dark:text-white bg-gradient-to-b from-blue-100 to-white text-blue-900 scroll-smooth">
+
+  <!-- Loader -->
+  <div id="loader"><div class="loader-circle"></div></div>
+
+  <!-- Navbar -->
+  <header class="bg-blue-800 shadow-lg sticky top-0 z-50 dark:bg-gray-800">
+    <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-white">CLIMATE PLOT</h1>
+      <ul class="flex gap-6 text-white font-semibold">
+        <li><a href="satya.html" class="text-white underline">Home</a></li>
+        <li><a href="about2.html" class="text-white hover:underline">About</a></li>
+        <li><a href="features.html" class="text-white hover:underline">Features</a></li>
+        <li><a href="testimonials.html" class="text-white hover:underline">Testimonials</a></li>
+        <li><a href="contact.html" class="text-white hover:underline">Contact</a></li>
+      </ul>
+      <button onclick="toggleDarkMode()" class="ml-4 px-3 py-1 bg-white text-blue-700 dark:bg-gray-700 dark:text-white rounded shadow hover:bg-blue-100 dark:hover:bg-gray-600 transition">Toggle Dark Mode</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative h-screen bg-gradient-to-br from-sky-300 via-sky-400 to-sky-500 flex items-center justify-center">
+    <div class="absolute inset-0 bg-gradient-to-br from-sky-300 via-sky-400 to-sky-500 opacity-90"></div>
+
+    <!-- Decorative Floating Icons -->
+    <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" class="w-16 absolute top-12 left-10 animate-bounce" />
+    <img src="https://cdn-icons-png.flaticon.com/512/1055/1055676.png" class="w-14 absolute bottom-10 right-10 animate-pulse" />
+    <img src="https://cdn-icons-png.flaticon.com/512/1055/1055666.png" class="w-12 absolute top-20 right-1/4 animate-spin-slow" />
+    <img src="https://cdn-icons-png.flaticon.com/512/1055/1055644.png" class="w-14 absolute bottom-1/3 left-1/3 animate-bounce" />
+    <img src="https://cdn-icons-png.flaticon.com/512/1055/1055639.png" class="w-14 absolute top-2/3 right-1/3 animate-spin-slow" />
+    <img src="https://cdn-icons-png.flaticon.com/512/1077/1077046.png" class="w-12 absolute top-1/4 left-1/2 animate-bounce" />
+    <img src="https://cdn-icons-png.flaticon.com/512/4299/4299941.png" class="w-14 absolute bottom-20 left-20 animate-ping" />
+
+    <!-- Centered Text -->
+    <div class="text-black text-center px-4 z-10" data-aos="fade-up" data-aos-duration="1000">
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-6 drop-shadow-lg text-black">CREATE REPORTS, FORECASTS, DASHBOARDS AND CONSOLIDATIONS</h1>
+      <p class="text-xl mb-6 drop-shadow-md text-black">Dynamic analytics, reporting, and visualization in one place.</p>
+      <a href="features.html" class="px-6 py-3 bg-white text-blue-700 hover:bg-blue-200 text-white font-semibold rounded-xl ripple transition duration-300">Explore Features</a>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-16 bg-blue-100" data-aos="fade-up" data-aos-duration="1000">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-extrabold text-center text-blue-700 mb-10">Our Impact in Numbers</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+        <div class="flex flex-col items-center">
+          <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Forecasts Icon" class="w-12 mb-4 animate-bounce">
+          <h3 class="text-4xl font-bold text-blue-600 counter" data-target="150">0</h3>
+          <p class="text-blue-800">Forecasts Delivered</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="https://cdn-icons-png.flaticon.com/512/857/857681.png" alt="Data Points Icon" class="w-12 mb-4 animate-pulse">
+          <h3 class="text-4xl font-bold text-blue-600 counter" data-target="20000">0</h3>
+          <p class="text-gray-600">Data Points Analyzed</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Satisfaction Icon" class="w-12 mb-4 animate-spin-slow">
+          <h3 class="text-4xl font-bold text-blue-600 counter" data-target="95">0%</h3>
+          <p class="text-gray-600">Client Satisfaction</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="https://cdn-icons-png.flaticon.com/512/2344/2344006.png" alt="Dashboards Icon" class="w-12 mb-4 animate-bounce">
+          <h3 class="text-4xl font-bold text-blue-600 counter" data-target="50">0</h3>
+          <p class="text-gray-600">Dashboards Built</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-20 bg-sky-50" data-aos="fade-up" data-aos-duration="1000">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-extrabold text-center text-blue-700 mb-12">What Our Users Say</h2>
+      <div class="grid gap-8 md:grid-cols-3">
+        <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-16 h-16 mx-auto rounded-full mb-4" />
+          <p class="text-blue-900 italic">“BluePlatform transformed our forecasting process. The dashboards are intuitive and the team is highly responsive.”</p>
+          <p class="mt-4 font-semibold text-blue-600">Anjali Sharma<br><span class="text-sm text-blue-400">Data Analyst</span></p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-16 h-16 mx-auto rounded-full mb-4" />
+          <p class="text-blue-900 italic">“Incredible performance and visuals. Our team now spends 60% less time generating reports!”</p>
+          <p class="mt-4 font-semibold text-blue-600">Rajeev Mehta<br><span class="text-sm text-blue-400">Project Manager</span></p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-16 h-16 mx-auto rounded-full mb-4" />
+          <p class="text-blue-900 italic">“A must-have tool for any modern data-driven organization. We love the forecast accuracy!”</p>
+          <p class="mt-4 font-semibold text-blue-600">Sneha Patel<br><span class="text-sm text-blue-400">Research Scientist</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Carousel Section -->
+  <section class="py-20 bg-blue-100" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-extrabold text-center text-blue-700 mb-10">More Testimonials</h2>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide bg-white p-6 rounded-xl shadow-lg text-center">
+            <img src="https://randomuser.me/api/portraits/men/45.jpg" class="w-16 h-16 mx-auto rounded-full mb-4" />
+            <p class="text-blue-900 italic">“Exceptional service and real-time reporting. Highly recommended!”</p>
+            <p class="mt-4 font-semibold text-blue-600">Amit Dey<br><span class="text-sm text-blue-400">Operations Head</span></p>
+          </div>
+          <div class="swiper-slide bg-white p-6 rounded-xl shadow-lg text-center">
+            <img src="https://randomuser.me/api/portraits/women/55.jpg" class="w-16 h-16 mx-auto rounded-full mb-4" />
+            <p class="text-blue-900 italic">“Saved hours of manual reporting work. Love the UI.”</p>
+            <p class="mt-4 font-semibold text-blue-600">Neha Reddy<br><span class="text-sm text-blue-400">Business Analyst</span></p>
+          </div>
+        </div>
+        <div class="swiper-pagination mt-6"></div>
+      </div>
+    </div>
+  </section>
+  <section class="py-20 bg-white" id="contact" data-aos="fade-up" data-aos-duration="1000">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-extrabold text-center text-blue-700 mb-10">Get in Touch</h2>
+      <form action="" class="bg-blue-50 p-8 rounded-xl shadow-md space-y-6" onsubmit="handleSubmit(event)">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <input type="text" placeholder="Your Name" class="p-3 rounded-lg border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <input type="email" placeholder="Your Email" class="p-3 rounded-lg border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <input type="text" placeholder="Subject" class="w-full p-3 rounded-lg border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <textarea placeholder="Your Message" rows="5" class="w-full p-3 rounded-lg border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        <div class="text-center">
+          <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    new Swiper('.mySwiper', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+    });
+    window.addEventListener('load', () => {
+      document.getElementById('loader').style.display = 'none';
+    });
+
+    // Counter animation logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const counters = document.querySelectorAll('.counter');
+      counters.forEach(counter => {
+        const updateCount = () => {
+          const target = +counter.getAttribute('data-target');
+          const current = +counter.innerText.replace(/[^\d]/g, '');
+          const increment = target / 100;
+          if (current < target) {
+            counter.innerText = Math.ceil(current + increment) + (counter.innerText.includes('%') ? '%' : '');
+            setTimeout(updateCount, 20);
+          } else {
+            counter.innerText = target + (counter.innerText.includes('%') ? '%' : '');
+          }
+        };
+        updateCount();
+      });
+    });
+  </script>
+<script>
+  function handleSubmit(event) {
+    event.preventDefault();
+    alert('Thank you! Your message has been sent.');
+  }
+</script>
+
+<!-- Back to Top Button -->
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="fixed bottom-6 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 z-50">
+    ↑
+  </button>
+
+<footer class="bg-blue-600 text-white text-center py-4 mt-10 sticky bottom-0">
+  <p class="text-sm">&copy; 2025 BluePlatform. All rights reserved.</p>
+</footer>
+</body>
+</html>
